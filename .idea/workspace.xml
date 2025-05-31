@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="Cleaned up DSL and made Systems by default have the update function">
+    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="Lint / Cleanup">
+      <change afterPath="$PROJECT_DIR$/CODE_OF_CONDUCT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/components/Cube.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/components/Cube.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/emitter/EntityEmitter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/emitter/EntityEmitter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/system/GraveyardSystem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/system/GraveyardSystem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/core/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorld.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorld.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/World.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/World.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +66,8 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SHELLCHECK.PATH": "/Users/r0adkll/Library/Application Support/JetBrains/IdeaIC2024.3/plugins/Shell Script/shellcheck",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/r0adkll/IdeaProjects/Cadence/core/src/commonMain/kotlin/com/r0adkll/cadence",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/r0adkll/IdeaProjects/Cadence",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -84,9 +76,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence" />
       <recent name="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game" />
       <recent name="$PROJECT_DIR$/library" />
     </key>
@@ -141,8 +133,27 @@
       <option name="project" value="LOCAL" />
       <updated>1748722261262</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Lint / Cleanup">
+      <option name="closed" value="true" />
+      <created>1748722607220</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748722607220</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -150,7 +161,8 @@
     <MESSAGE value="initial commit of the ecs system + test" />
     <MESSAGE value="Refactored ECS system" />
     <MESSAGE value="Cleaned up DSL and made Systems by default have the update function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up DSL and made Systems by default have the update function" />
+    <MESSAGE value="Lint / Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lint / Cleanup" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
