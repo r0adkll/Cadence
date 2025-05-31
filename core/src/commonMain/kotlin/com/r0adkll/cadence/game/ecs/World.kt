@@ -1,3 +1,5 @@
+// Copyright (C) 2025 r0adkll
+// SPDX-License-Identifier: Apache-2.0
 package com.r0adkll.cadence.game.ecs
 
 import com.r0adkll.cadence.game.components.Window
@@ -51,7 +53,9 @@ class World {
     // Update the entities signature, and notify any systems
     val entitySignature = entityManager.getSignature(entity) ?: 0
     val newSignature = entitySignature.applySignature(componentSignature, true)
-    log { "Adding Component[${C::class.simpleName}, sig: $componentSignature] to Entity[$entity, sig: $entitySignature]" }
+    log {
+      "Adding Component[${C::class.simpleName}, sig: $componentSignature] to Entity[$entity, sig: $entitySignature]"
+    }
     entityManager.setSignature(entity, newSignature)
 
     systemManager.notifyEntityChange(entity, newSignature)
@@ -71,13 +75,13 @@ class World {
   inline fun <reified S : System> registerSystem(
     system: S,
     block: SystemRegistrationScope.() -> Unit = {},
-  ): S{
+  ): S {
     system.world = this
     systemManager.register(system)
     setSystemSignature<S>(
       SystemRegistrationScope(this)
         .apply(block)
-        .signature
+        .signature,
     )
     return system
   }
@@ -97,7 +101,7 @@ class EntityRegistrationScope(
   val world: World,
 ) {
 
-  inline fun <reified C: Component> addComponent(component: C) {
+  inline fun <reified C : Component> addComponent(component: C) {
     world.addComponent(entity, component)
   }
 }

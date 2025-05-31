@@ -1,3 +1,5 @@
+// Copyright (C) 2025 r0adkll
+// SPDX-License-Identifier: Apache-2.0
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
@@ -19,7 +21,7 @@ kotlin {
   iosSimulatorArm64()
   @OptIn(ExperimentalWasmDsl::class)
   wasmJs {
-    moduleName = property("POM_ARTIFACT_ID").toString()
+    outputModuleName = property("POM_ARTIFACT_ID").toString()
     browser()
   }
 
@@ -29,7 +31,6 @@ kotlin {
     commonMain.dependencies {
       implementation(compose.runtime)
       implementation(compose.foundation)
-//            implementation(compose.ui)
     }
   }
 }

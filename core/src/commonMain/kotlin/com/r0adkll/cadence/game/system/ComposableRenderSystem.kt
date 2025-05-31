@@ -1,3 +1,5 @@
+// Copyright (C) 2025 r0adkll
+// SPDX-License-Identifier: Apache-2.0
 package com.r0adkll.cadence.game.system
 
 import androidx.compose.runtime.Composable

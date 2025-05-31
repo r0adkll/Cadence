@@ -1,3 +1,5 @@
+// Copyright (C) 2025 r0adkll
+// SPDX-License-Identifier: Apache-2.0
 package com.r0adkll.cadence.game.ecs
 
 import com.r0adkll.cadence.utils.log

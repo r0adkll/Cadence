@@ -1,9 +1,8 @@
-// Copyright (C) 2023 r0adkll
+// Copyright (C) 2025 r0adkll
 // SPDX-License-Identifier: Apache-2.0
 package com.r0adkll.cadence.app
 
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -16,7 +15,6 @@ import androidx.compose.ui.window.rememberWindowState
 import com.r0adkll.cadence.app.components.Cube
 import com.r0adkll.cadence.app.emitter.EntityEmitter
 import com.r0adkll.cadence.app.system.GraveyardSystem
-import com.r0adkll.cadence.game.GameWorld
 import com.r0adkll.cadence.game.components.Gravity
 import com.r0adkll.cadence.game.components.Renderable
 import com.r0adkll.cadence.game.components.RigidBody
@@ -64,7 +62,7 @@ fun main() = application {
     state = windowState,
   ) {
     gameWorld.Content(
-      modifier = Modifier.fillMaxSize()
+      modifier = Modifier.fillMaxSize(),
     )
   }
 }

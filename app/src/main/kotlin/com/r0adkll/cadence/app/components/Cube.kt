@@ -1,3 +1,5 @@
+// Copyright (C) 2025 r0adkll
+// SPDX-License-Identifier: Apache-2.0
 package com.r0adkll.cadence.app.components
 
 import androidx.compose.foundation.Canvas
@@ -10,10 +12,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastRoundToInt
-import com.r0adkll.cadence.game.ecs.World
 import com.r0adkll.cadence.game.components.Renderable
 import com.r0adkll.cadence.game.components.Transform
 import com.r0adkll.cadence.game.ecs.Entity
+import com.r0adkll.cadence.game.ecs.World
 
 class Cube(
   val color: Color,
@@ -32,7 +34,7 @@ class Cube(
             x = transform.position.x.fastRoundToInt(),
             y = transform.position.y.fastRoundToInt(),
           )
-        }
+        },
     ) {
       drawRect(color)
     }

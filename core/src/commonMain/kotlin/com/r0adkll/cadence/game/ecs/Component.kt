@@ -1,8 +1,9 @@
+// Copyright (C) 2025 r0adkll
+// SPDX-License-Identifier: Apache-2.0
 package com.r0adkll.cadence.game.ecs
 
 import com.r0adkll.cadence.utils.log
 import kotlin.reflect.KClass
-
 
 /**
  * Base component type for better typing in this system
@@ -58,7 +59,7 @@ class ComponentManager {
    * If the [Component] is already registered, then return its existing signature
    * @return the [Signature] of the registered component
    */
-  inline fun <reified T: Component> register(): Signature {
+  inline fun <reified T : Component> register(): Signature {
     // If we've already registered this component them, then just return as there is nothing to do here
     if (componentArrays.contains(T::class)) return componentSignatures[T::class]!!
 

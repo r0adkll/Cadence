@@ -1,10 +1,16 @@
+// Copyright (C) 2025 r0adkll
+// SPDX-License-Identifier: Apache-2.0
 package com.r0adkll.cadence.game
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onSizeChanged
-import com.r0adkll.cadence.game.components.*
+import com.r0adkll.cadence.game.components.Gravity
+import com.r0adkll.cadence.game.components.Renderable
+import com.r0adkll.cadence.game.components.RigidBody
+import com.r0adkll.cadence.game.components.Transform
+import com.r0adkll.cadence.game.components.Window
 import com.r0adkll.cadence.game.ecs.World
 import com.r0adkll.cadence.game.system.ComposableRenderSystem
 import com.r0adkll.cadence.game.system.PhysicsSystem
@@ -48,7 +54,7 @@ class GameWorld internal constructor(
         .onSizeChanged { newSize ->
           // Update our world with the current window size
           world.getComponent<Window>(world.self)?.size = newSize
-        }
+        },
     ) {
       renderSystem.Content()
     }

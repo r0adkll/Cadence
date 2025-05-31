@@ -1,3 +1,5 @@
+// Copyright (C) 2025 r0adkll
+// SPDX-License-Identifier: Apache-2.0
 @file:OptIn(ExperimentalCoroutinesApi::class)
 
 package com.r0adkll.cadence.game
@@ -9,11 +11,11 @@ import androidx.compose.runtime.withFrameNanos
 import com.r0adkll.cadence.utils.GameThread
 import com.r0adkll.cadence.utils.Performance
 import com.r0adkll.cadence.utils.PhysicsThread
+import kotlin.coroutines.coroutineContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.withContext
-import kotlin.coroutines.coroutineContext
 
 interface GameLoop {
 

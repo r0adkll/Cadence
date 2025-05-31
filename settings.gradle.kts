@@ -1,3 +1,5 @@
+// Copyright (C) 2025 r0adkll
+// SPDX-License-Identifier: Apache-2.0
 pluginManagement {
   repositories {
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")

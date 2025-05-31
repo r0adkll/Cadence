@@ -1,12 +1,13 @@
+// Copyright (C) 2025 r0adkll
+// SPDX-License-Identifier: Apache-2.0
 package com.r0adkll.cadence.app.emitter
 
 import kotlin.time.Duration
 
-
 class EntityEmitter(
   val emit: () -> Unit,
   interval: Duration,
-  val limit: Long? = null
+  val limit: Long? = null,
 ) {
   private val intervalNanos = interval.inWholeNanoseconds
 
