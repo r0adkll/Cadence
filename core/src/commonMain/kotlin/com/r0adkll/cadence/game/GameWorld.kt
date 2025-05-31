@@ -7,6 +7,7 @@ import com.r0adkll.cadence.game.components.Gravity
 import com.r0adkll.cadence.game.components.Renderable
 import com.r0adkll.cadence.game.components.RigidBody
 import com.r0adkll.cadence.game.components.Transform
+import com.r0adkll.cadence.game.ecs.World
 import com.r0adkll.cadence.game.system.ComposableRenderSystem
 import com.r0adkll.cadence.game.system.PhysicsSystem
 

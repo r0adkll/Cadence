@@ -6,3 +6,9 @@ object Debug {
    */
   const val enabled: Boolean = false
 }
+
+fun log(msg: () -> String) {
+  if (Debug.enabled) {
+    println(msg())
+  }
+}

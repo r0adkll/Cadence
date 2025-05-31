@@ -1,7 +1,7 @@
 package com.r0adkll.cadence.game.components
 
 import androidx.compose.ui.geometry.Offset
-import com.r0adkll.cadence.game.Component
+import com.r0adkll.cadence.game.ecs.Component
 
 class RigidBody(
   var velocity: Offset = Offset.Zero,

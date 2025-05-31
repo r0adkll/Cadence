@@ -2,8 +2,8 @@ package com.r0adkll.cadence.game.system
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.key
-import com.r0adkll.cadence.game.System
 import com.r0adkll.cadence.game.components.Renderable
+import com.r0adkll.cadence.game.ecs.System
 
 class ComposableRenderSystem : System() {
 

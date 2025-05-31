@@ -1,6 +1,7 @@
 package com.r0adkll.cadence.app.emitter
 
-import com.r0adkll.cadence.game.Entity
+import com.r0adkll.cadence.game.ecs.Entity
+
 
 class EntityEmitter(
   val emit: () -> Entity,

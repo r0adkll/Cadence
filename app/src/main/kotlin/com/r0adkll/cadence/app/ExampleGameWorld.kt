@@ -9,13 +9,12 @@ import com.r0adkll.cadence.app.components.Cube
 import com.r0adkll.cadence.app.components.WindowSize
 import com.r0adkll.cadence.app.emitter.EntityEmitter
 import com.r0adkll.cadence.app.system.GraveyardSystem
-import com.r0adkll.cadence.game.Entity
 import com.r0adkll.cadence.game.GameWorld
 import com.r0adkll.cadence.game.components.Gravity
 import com.r0adkll.cadence.game.components.Renderable
 import com.r0adkll.cadence.game.components.RigidBody
 import com.r0adkll.cadence.game.components.Transform
-import com.r0adkll.cadence.game.createSignature
+import com.r0adkll.cadence.game.ecs.Entity
 import kotlin.random.Random
 import kotlin.time.Duration.Companion.milliseconds
 

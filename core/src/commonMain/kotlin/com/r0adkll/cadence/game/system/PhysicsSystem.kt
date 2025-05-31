@@ -1,9 +1,9 @@
 package com.r0adkll.cadence.game.system
 
-import com.r0adkll.cadence.game.System
 import com.r0adkll.cadence.game.components.Gravity
 import com.r0adkll.cadence.game.components.RigidBody
 import com.r0adkll.cadence.game.components.Transform
+import com.r0adkll.cadence.game.ecs.System
 
 class PhysicsSystem : System() {
 

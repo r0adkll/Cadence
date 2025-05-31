@@ -2,9 +2,9 @@ package com.r0adkll.cadence.app.system
 
 import androidx.compose.ui.unit.IntSize
 import com.r0adkll.cadence.app.components.WindowSize
-import com.r0adkll.cadence.game.Entity
-import com.r0adkll.cadence.game.System
 import com.r0adkll.cadence.game.components.Transform
+import com.r0adkll.cadence.game.ecs.Entity
+import com.r0adkll.cadence.game.ecs.System
 
 class GraveyardSystem(
   val worldEntity: Entity,
