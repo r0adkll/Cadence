@@ -1,20 +1,24 @@
 package com.r0adkll.cadence.app.emitter
 
-import com.r0adkll.cadence.game.ecs.Entity
+import kotlin.time.Duration
 
 
 class EntityEmitter(
-  val emit: () -> Entity,
-  val intervalNanos: Long,
-  val limit: Int = Int.MAX_VALUE
+  val emit: () -> Unit,
+  interval: Duration,
+  val limit: Long? = null
 ) {
+  private val intervalNanos = interval.inWholeNanoseconds
 
-  private var emitCount = 0
+  private var emitCount = 0L
   private var cumulativeTimeNanos = 0L
 
-  fun update(deltaNanos: Long) {
-    cumulativeTimeNanos += deltaNanos
-    if (cumulativeTimeNanos > intervalNanos && emitCount < limit) {
+  fun update(deltaNs: Long) {
+    if (limit != null && emitCount >= limit) return
+
+    cumulativeTimeNanos += deltaNs
+
+    if (cumulativeTimeNanos > intervalNanos) {
       emit()
       emitCount++
       cumulativeTimeNanos = 0L

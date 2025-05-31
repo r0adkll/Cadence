@@ -4,27 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="initial commit of the ecs system + test">
-      <change afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/Component.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/Entity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/Signature.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/System.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/World.kt" afterDir="false" />
+    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="Refactored ECS system">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/Game.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorldDsl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/components/Window.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/ExampleGameWorld.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/ExampleGameWorld.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/components/Cube.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/components/Cube.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/components/WindowSize.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/components/WindowSize.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/ExampleGameWorld.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/components/WindowSize.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/emitter/EntityEmitter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/emitter/EntityEmitter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/system/GraveyardSystem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app/system/GraveyardSystem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ECS.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameLoop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameLoop.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorld.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorld.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/components/Gravity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/components/Gravity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/components/Renderable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/components/Renderable.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/components/RigidBody.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/components/RigidBody.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/components/Transform.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/components/Transform.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/system/ComposableRenderSystem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/system/ComposableRenderSystem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/Component.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/Component.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/Signature.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/Signature.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/System.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/System.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/World.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/World.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/system/PhysicsSystem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/system/PhysicsSystem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/utils/Debug.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/utils/Debug.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +54,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -80,6 +77,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SHELLCHECK.PATH": "/Users/r0adkll/Library/Application Support/JetBrains/IdeaIC2024.3/plugins/Shell Script/shellcheck",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/r0adkll/IdeaProjects/Cadence/core/src/commonMain/kotlin/com/r0adkll/cadence",
@@ -131,11 +129,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748660487014</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactored ECS system">
+      <option name="closed" value="true" />
+      <created>1748661039078</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748661039078</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="initial commit of the ecs system + test" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit of the ecs system + test" />
+    <MESSAGE value="Refactored ECS system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored ECS system" />
+    <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

@@ -51,11 +51,24 @@ class ComponentManager {
   val componentSignatures = mutableMapOf<KClass<*>, Signature>()
   val componentArrays = mutableMapOf<KClass<*>, ComponentArray<*>>()
 
-  inline fun <reified T: Component> register() {
+  /**
+   * Register a new [Component] with the manager creating a new [ComponentArray] to store
+   * references, and a new signature to associate them with [Entity] and [System]s.
+   *
+   * If the [Component] is already registered, then return its existing signature
+   * @return the [Signature] of the registered component
+   */
+  inline fun <reified T: Component> register(): Signature {
+    // If we've already registered this component them, then just return as there is nothing to do here
+    if (componentArrays.contains(T::class)) return componentSignatures[T::class]!!
+
     val newArray = ComponentArray<T>(arrayOfNulls(EntityManager.DEFAULT_MAX))
+    val newSignature = signatureFactory.next()
     componentArrays[T::class] = newArray
-    componentSignatures[T::class] = signatureFactory.next()
+    componentSignatures[T::class] = newSignature
     log { "Component[${T::class.simpleName}] Signature[${componentSignatures[T::class]}]" }
+
+    return newSignature
   }
 
   @Suppress("UNCHECKED_CAST")
@@ -71,7 +84,7 @@ class ComponentManager {
 
   inline fun <reified T : Component> get(entity: Entity): T? {
     val componentArray = componentArrays[T::class]
-    return componentArray?.get(entity) as T
+    return componentArray?.get(entity) as? T
   }
 
   inline fun <reified T : Component> getSignature(): Signature {

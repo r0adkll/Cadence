@@ -7,7 +7,7 @@ import com.r0adkll.cadence.game.ecs.System
 
 class PhysicsSystem : System() {
 
-  fun update(delta: Double) {
+  override fun update(timeNanos: Long, deltaNs: Long, delta: Double) {
     entities.forEach { entity ->
       val rigidBody = world.getComponent<RigidBody>(entity)!!
       val transform = world.getComponent<Transform>(entity)!!

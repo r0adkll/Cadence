@@ -1,26 +1,23 @@
 package com.r0adkll.cadence.app.system
 
 import androidx.compose.ui.unit.IntSize
-import com.r0adkll.cadence.app.components.WindowSize
 import com.r0adkll.cadence.game.components.Transform
+import com.r0adkll.cadence.game.components.Window
 import com.r0adkll.cadence.game.ecs.Entity
 import com.r0adkll.cadence.game.ecs.System
 
-class GraveyardSystem(
-  val worldEntity: Entity,
-) : System() {
+class GraveyardSystem() : System() {
 
-  var deadEntities = mutableListOf<Entity>()
+  private var deadEntities = mutableListOf<Entity>()
 
-  fun update(delta: Double) {
-    val windowSize = world.getComponent<WindowSize>(worldEntity)!!
+  override fun update(timeNanos: Long, deltaNs: Long, delta: Double) {
+    val windowSize = world.getComponent<Window>(world.self)!!
     if (windowSize.size == IntSize.Zero) return
 
     entities.forEach { entity ->
       val transform = world.getComponent<Transform>(entity)!!
 
       if (transform.position.y > windowSize.size.height) {
-        //world.destroyEntity(entity)
         deadEntities += entity
       }
     }

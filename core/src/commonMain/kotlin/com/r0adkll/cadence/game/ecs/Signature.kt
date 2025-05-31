@@ -2,7 +2,33 @@ package com.r0adkll.cadence.game.ecs
 
 import kotlin.math.pow
 
+/**
+ * Signatures are just bitwise encoded 32-bit integers.
+ *
+ * For example, if a [System] requires a Tranform, RigidBody, and Gravity component we want to encode those
+ * component signatures into the system signature. For example, take
+ *
+ * ```
+ * Transform = 0x00001 = 1
+ * RigidBoxy = 0x00010 = 2
+ * Gravity   = 0x00100 = 4
+ * ----------|---------|---
+ * System    | 0x00111 | 7
+ * ```
+ *
+ * Then when you create an entity and add the Transform, RigidBody, and Gravity to it will also have a signature
+ * of `0x00111` and we can cheaply determine if it needs to be added/removed from certain systems.
+ *
+ */
 typealias Signature = Int
+
+/**
+ * Set the provided [Signature] [value] to this signature based on the provided [enabled]
+ * flag.
+ */
+fun Signature.applySignature(value: Signature, enabled: Boolean = true): Signature {
+  return setSignature(this, value, enabled)
+}
 
 /**
  * Modifies a signature by setting or unsetting a specific value signature.
@@ -20,19 +46,25 @@ fun setSignature(original: Signature, value: Signature, enabled: Boolean = true)
   }
 }
 
-fun Signature.applySignature(value: Signature, enabled: Boolean = true): Signature {
-  return setSignature(this, value, enabled)
-}
-
-fun createSignature(vararg values: Signature): Signature {
-  return values.fold(0) { acc, value ->
-    acc.applySignature(value)
-  }
-}
-
 /**
  * Factory used to generate an ordered list of bitwise int signatures that
- * can be signed in to a whole signature for use in our ECS
+ * can be signed in to a whole signature for use in our ECS.
+ *
+ * When encoding signatures into an integer we need to use base2 exponential numbers
+ * so that each unique signature is defined by a unique bit in an integer.
+ *
+ * Take the example:
+ *
+ * ```
+ * 0x00001 = 1
+ * 0x00010 = 2
+ * 0x00100 = 4
+ * 0x01000 = 8
+ * 0x10000 = 16
+ * ```
+ *
+ * Here you can observe that each bit scales at a power of 2, so to generate a ready usable list of
+ * signatures to give components we generate a queue of available signatures as such.
  */
 class BitwiseSignatureFactory {
   private val available = ArrayDeque<Signature>(32)

@@ -1,16 +1,25 @@
 package com.r0adkll.cadence.game.ecs
 
 import androidx.compose.runtime.mutableStateSetOf
+import com.r0adkll.cadence.game.GameLoop
 import com.r0adkll.cadence.utils.log
 import kotlin.reflect.KClass
 
-abstract class System {
+abstract class System : GameLoop {
   lateinit var world: World
 
   val entities = mutableStateSetOf<Entity>()
+
+  override fun update(timeNanos: Long, deltaNs: Long, delta: Double) {
+    // Do nothing by default
+  }
+
+  override fun updatePhysics(timeNanos: Long, deltaNs: Long, delta: Double) {
+    // Do nothing by default
+  }
 }
 
-class SystemManager {
+class SystemManager : GameLoop {
   val systems = mutableMapOf<KClass<*>, System>()
   val signatures = mutableMapOf<KClass<*>, Signature>()
 
@@ -42,5 +51,13 @@ class SystemManager {
         system.entities.remove(entity)
       }
     }
+  }
+
+  override fun update(timeNanos: Long, deltaNs: Long, delta: Double) {
+    systems.values.forEach { it.update(timeNanos, deltaNs, delta) }
+  }
+
+  override fun updatePhysics(timeNanos: Long, deltaNs: Long, delta: Double) {
+    systems.values.forEach { it.updatePhysics(timeNanos, deltaNs, delta) }
   }
 }
