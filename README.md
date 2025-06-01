@@ -9,13 +9,36 @@ The core of this project is a simple Entity Component System, ECS, that coordina
 - [Wikipedia](https://en.wikipedia.org/wiki/Entity_component_system)
 - [A Simple Entity Component System (ECS) C++](https://austinmorlan.com/posts/entity_component_system/)
 
+## Installation
+
+**settings.gradle.kts**
+
+```kotlin
+dependencyResolutionManagement {
+  repositories {
+    //…
+    maven {
+      url = Uri("https://oss.sonatype.org/content/repositories/snapshots")
+    }
+  }
+}
+```
+
+**build.gradle.kts**
+
+```kotlin
+dependencies {
+  implementation("com.r0adkll.cadence:core:0.1.0-SNAPSHOT")
+}
+```
+
 ## Usage
 
 ```kotlin
 @Composable
 fun MyGameComposable() {
   val gameWorld = rememberGameWorld()
-  gameWorld.Content()
+  gameWorld.Content(Modifier.fillMaxSize())
 }
 ```
 
