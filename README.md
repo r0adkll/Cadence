@@ -11,6 +11,19 @@ The core of this project is a simple Entity Component System, ECS, that coordina
 
 ## Installation
 
+[![Maven Central](https://img.shields.io/maven-central/v/com.r0adkll.cadence/core.svg)](https://search.maven.org/search?q=g:com.r0adkll.cadence)
+[![Sonatype Snapshot](https://img.shields.io/nexus/s/https/oss.sonatype.org/com.r0adkll.cadence/core.svg)](https://oss.sonatype.org/content/repositories/snapshots/com/r0adkll/cadence/)
+
+```kotlin
+dependencies {
+  implementation("com.r0adkll.cadence:core:<latest_version>")
+}
+```
+
+<details>
+
+<summary>Snapshots</summary>
+
 **settings.gradle.kts**
 
 ```kotlin
@@ -31,6 +44,10 @@ dependencies {
   implementation("com.r0adkll.cadence:core:0.1.0-SNAPSHOT")
 }
 ```
+
+</details>
+
+
 
 ## Usage
 
