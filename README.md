@@ -2,6 +2,11 @@
 
 A toy project for building lightweight game or game like experiences in Multiplatform Jetpack Compose.
 
+
+<p align="center">
+  <img src=".github/art/particle_blocks_demo.gif" />
+</p>
+
 ## ECS
 
 The core of this project is a simple Entity Component System, ECS, that coordinates and drives the elements you build into the `GameWorld`. For more reading on ECS and using them, check out:

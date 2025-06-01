@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="preparing for initial release">
+    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="Adding badges and updated instructions to readme">
+      <change afterPath="$PROJECT_DIR$/.github/art/particle_blocks_demo.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -77,7 +78,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SHELLCHECK.PATH": "/Users/r0adkll/Library/Application Support/JetBrains/IdeaIC2024.3/plugins/Shell Script/shellcheck",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/r0adkll/IdeaProjects/Cadence",
+    "last_opened_file_path": "/Users/r0adkll/IdeaProjects/Cadence/.github/art",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -86,11 +87,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/art" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence" />
       <recent name="$PROJECT_DIR$/app/src/main/kotlin/com/r0adkll/cadence/app" />
       <recent name="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game" />
-      <recent name="$PROJECT_DIR$/library" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
       <recent name="com.r0adkll.cadence.game.ecs" />
@@ -191,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748812418544</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Adding badges and updated instructions to readme">
+      <option name="closed" value="true" />
+      <created>1748813034879</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748813034879</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,7 +226,8 @@
     <MESSAGE value="Removing unused class" />
     <MESSAGE value="Added more readme instructions" />
     <MESSAGE value="preparing for initial release" />
-    <option name="LAST_COMMIT_MESSAGE" value="preparing for initial release" />
+    <MESSAGE value="Adding badges and updated instructions to readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding badges and updated instructions to readme" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
