@@ -44,7 +44,7 @@ class World {
 
   inline fun <reified C : Component> addComponent(entity: Entity, component: C) {
     // Make sure our components are registered with the system before being added
-    // to an entity. The ensures that its array and signature are available for use.
+    // to an entity. That ensures that its array and signature are available for use.
     val componentSignature = componentManager.register<C>()
 
     // Register the provided component to the entity

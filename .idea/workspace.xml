@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="Removing unused class">
+    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="Added more readme instructions">
+      <change afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RELEASING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/release.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/World.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/World.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748749441484</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added more readme instructions">
+      <option name="closed" value="true" />
+      <created>1748787202341</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1748787202341</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,7 +210,8 @@
     <MESSAGE value="Basic project docs" />
     <MESSAGE value="minor readme/doc tweaks" />
     <MESSAGE value="Removing unused class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removing unused class" />
+    <MESSAGE value="Added more readme instructions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more readme instructions" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
