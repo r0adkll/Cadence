@@ -11,7 +11,13 @@ The core of this project is a simple Entity Component System, ECS, that coordina
 
 ## Usage
 
-_TODO: See :app_
+```kotlin
+@Composable
+fun MyGameComposable() {
+  val gameWorld = rememberGameWorld()
+  gameWorld.Content()
+}
+```
 
 ## License
 

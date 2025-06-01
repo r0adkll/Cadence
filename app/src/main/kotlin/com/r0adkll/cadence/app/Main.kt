@@ -23,7 +23,6 @@ import com.r0adkll.cadence.game.rememberGameWorld
 import kotlin.random.Random
 import kotlin.time.Duration.Companion.milliseconds
 
-@Suppress("CAST_NEVER_SUCCEEDS", "UNCHECKED_CAST", "USELESS_CAST", "KotlinRedundantDiagnosticSuppress")
 fun main() = application {
   val gameWorld = rememberGameWorld {
     world.registerSystem(GraveyardSystem()) {
