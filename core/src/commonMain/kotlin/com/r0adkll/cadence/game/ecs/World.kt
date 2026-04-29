@@ -3,6 +3,8 @@
 package com.r0adkll.cadence.game.ecs
 
 import com.r0adkll.cadence.game.components.Window
+import com.r0adkll.cadence.tracer.Tracer
+import com.r0adkll.cadence.tracer.trace
 import com.r0adkll.cadence.utils.log
 
 /**
@@ -12,6 +14,7 @@ class World {
   val entityManager = EntityManager()
   val componentManager = ComponentManager()
   val systemManager = SystemManager()
+  var tracer: Tracer = Tracer.NoOp
 
   /**
    * Create a root entity that represents the entire "world". This essentially is a global
@@ -30,19 +33,19 @@ class World {
     return getComponent<Window>(self)!!
   }
 
-  fun createEntity(block: EntityRegistrationScope.() -> Unit = {}): Entity {
+  fun createEntity(block: EntityRegistrationScope.() -> Unit = {}): Entity = tracer.trace("World.createEntity") {
     return entityManager.create().apply {
       EntityRegistrationScope(this, this@World).block()
     }
   }
 
-  fun destroyEntity(entity: Entity) {
+  fun destroyEntity(entity: Entity) = tracer.trace("World.destroyEntity") {
     entityManager.destroy(entity)
     componentManager.destroy(entity)
     systemManager.destroy(entity)
   }
 
-  inline fun <reified C : Component> addComponent(entity: Entity, component: C) {
+  inline fun <reified C : Component> addComponent(entity: Entity, component: C) = tracer.trace("World.addComponent") {
     // Make sure our components are registered with the system before being added
     // to an entity. That ensures that its array and signature are available for use.
     val componentSignature = componentManager.register<C>()
@@ -61,7 +64,7 @@ class World {
     systemManager.notifyEntityChange(entity, newSignature)
   }
 
-  inline fun <reified C : Component> removeComponent(entity: Entity) {
+  inline fun <reified C : Component> removeComponent(entity: Entity) = tracer.trace("World.removeComponent") {
     componentManager.remove<C>(entity)
 
     val entitySignature = entityManager.getSignature(entity)!!
@@ -75,7 +78,7 @@ class World {
   inline fun <reified S : System> registerSystem(
     system: S,
     block: SystemRegistrationScope.() -> Unit = {},
-  ): S {
+  ): S = tracer.trace("World.registerSystem") {
     system.world = this
     systemManager.register(system)
     setSystemSignature<S>(
@@ -86,13 +89,17 @@ class World {
     return system
   }
 
-  inline fun <reified S : System> setSystemSignature(signature: Signature) {
+  inline fun <reified S : System> setSystemSignature(signature: Signature) = tracer.trace("World.setSystemSignature") {
     log { "System[${S::class.simpleName}] Signature[$signature]" }
     systemManager.setSignature<S>(signature)
   }
 
-  inline fun <reified C : Component> getComponent(entity: Entity): C? {
+  inline fun <reified C : Component> getComponent(entity: Entity): C? = tracer.trace("World.getComponent") {
     return componentManager.get(entity)
+  }
+
+  fun setTracer(tracer: Tracer) {
+    this.tracer = tracer
   }
 }
 

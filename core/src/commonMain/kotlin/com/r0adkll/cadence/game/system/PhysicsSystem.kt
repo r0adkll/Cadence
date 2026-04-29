@@ -6,10 +6,11 @@ import com.r0adkll.cadence.game.components.Gravity
 import com.r0adkll.cadence.game.components.RigidBody
 import com.r0adkll.cadence.game.components.Transform
 import com.r0adkll.cadence.game.ecs.System
+import com.r0adkll.cadence.tracer.trace
 
 class PhysicsSystem : System() {
 
-  override fun update(timeNanos: Long, deltaNs: Long, delta: Double) {
+  override fun update(timeNanos: Long, deltaNs: Long, delta: Double) = world.tracer.trace("PhysicsSystem.update") {
     entities.forEach { entity ->
       val rigidBody = world.getComponent<RigidBody>(entity)!!
       val transform = world.getComponent<Transform>(entity)!!

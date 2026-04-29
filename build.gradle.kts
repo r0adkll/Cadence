@@ -118,7 +118,7 @@ subprojects {
 
   // Common android config
   val commonAndroidConfig: CommonExtension<*, *, *, *, *, *>.() -> Unit = {
-    compileSdk = 34
+    compileSdk = 36
 
     compileOptions {
       sourceCompatibility = JavaVersion.VERSION_17

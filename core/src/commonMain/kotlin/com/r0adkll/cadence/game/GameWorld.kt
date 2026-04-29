@@ -14,6 +14,7 @@ import com.r0adkll.cadence.game.components.Window
 import com.r0adkll.cadence.game.ecs.World
 import com.r0adkll.cadence.game.system.ComposableRenderSystem
 import com.r0adkll.cadence.game.system.PhysicsSystem
+import com.r0adkll.cadence.tracer.trace
 
 class GameWorld internal constructor(
   private val world: World,
@@ -35,15 +36,16 @@ class GameWorld internal constructor(
     }
   }
 
-  override fun update(timeNanos: Long, deltaNs: Long, delta: Double) {
+  override fun update(timeNanos: Long, deltaNs: Long, delta: Double) = world.tracer.trace("GameWorld.update") {
     world.systemManager.update(timeNanos, deltaNs, delta)
     additionalUpdate(world, timeNanos, deltaNs, delta)
   }
 
-  override fun updatePhysics(timeNanos: Long, deltaNs: Long, delta: Double) {
-    world.systemManager.updatePhysics(timeNanos, deltaNs, delta)
-    additionalPhysicsUpdate(world, timeNanos, deltaNs, delta)
-  }
+  override fun updatePhysics(timeNanos: Long, deltaNs: Long, delta: Double) =
+    world.tracer.trace("GameWorld.updatePhysics") {
+      world.systemManager.updatePhysics(timeNanos, deltaNs, delta)
+      additionalPhysicsUpdate(world, timeNanos, deltaNs, delta)
+    }
 
   @Composable
   override fun Content(modifier: Modifier) {

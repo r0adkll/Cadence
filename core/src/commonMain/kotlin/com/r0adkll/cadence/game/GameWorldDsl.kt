@@ -18,12 +18,10 @@ class GameWorldBuilder(
   private var update: UpdateFunction = { _, _, _ -> }
   private var updatePhysics: UpdateFunction = { _, _, _ -> }
 
-  @GameWorldDsl
   fun onUpdate(block: UpdateFunction) {
     update = block
   }
 
-  @GameWorldDsl
   fun onUpdatePhysics(block: UpdateFunction) {
     updatePhysics = block
   }
@@ -33,7 +31,6 @@ class GameWorldBuilder(
   }
 }
 
-@GameWorldDsl
 fun GameWorld(block: GameWorldBuilder.() -> Unit): GameWorld {
   val world = World()
   val builder = GameWorldBuilder(world)
@@ -41,7 +38,6 @@ fun GameWorld(block: GameWorldBuilder.() -> Unit): GameWorld {
   return builder.build()
 }
 
-@GameWorldDsl
 @Composable
 fun rememberGameWorld(block: GameWorldBuilder.() -> Unit = {}): GameWorld {
   return remember {

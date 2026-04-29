@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="Add demo gif">
-      <change afterPath="$PROJECT_DIR$/.idea/AndroidProjectSystem.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="Dependency updates">
+      <change afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/tracer/Tracer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/Entity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/Entity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorld.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorld.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorldDsl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorldDsl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/World.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/World.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/system/PhysicsSystem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/system/PhysicsSystem.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +46,7 @@
       <list>
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -64,6 +65,9 @@
     &quot;accountId&quot;: &quot;0779045a-0e17-494c-9687-4108649a9fd5&quot;
   }
 }</component>
+  <component name="KmpCIFakeDoorExperiment">
+    <option name="notifiedAboutCITutorial" value="true" />
+  </component>
   <component name="KotlinMultiplatform" KONAN_HOME="$USER_HOME$/.konan/kotlin-native-prebuilt-macos-aarch64-2.3.21">
     <executable TARGET="ios_arm64" TARGET_NAME="iosArm64" EXECUTABLE_NAME="test" PROJECT_PREFIX=":core:" IS_TEST="true">
       <variant NAME="Debug" GRADLE_TASK=":core:linkDebugTestIosArm64" FILE="$PROJECT_DIR$/core/build/bin/iosArm64/debugTest/test.kexe" WORKING_DIR="" PROGRAM_PARAMS="">
@@ -96,10 +100,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build Cadence.executor": "Run",
+    "Gradle.Cadence [:app:com.r0adkll.cadence.app.MainKt.main()].executor": "Run",
     "Kotlin.MainKt.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -306,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748813723481</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Dependency updates">
+      <option name="closed" value="true" />
+      <created>1777469301458</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777469301458</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +351,8 @@
     <MESSAGE value="preparing for initial release" />
     <MESSAGE value="Adding badges and updated instructions to readme" />
     <MESSAGE value="Add demo gif" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add demo gif" />
+    <MESSAGE value="Dependency updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dependency updates" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
