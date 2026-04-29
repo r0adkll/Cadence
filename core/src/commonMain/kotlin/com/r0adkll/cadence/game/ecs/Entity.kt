@@ -17,7 +17,8 @@ class EntityManager(
   private val available = ArrayDeque<Entity>()
   private val signatures = mutableMapOf<Entity, Signature>()
 
-  private var living: Int = 0
+  var living: Int = 0
+    private set
 
   init {
     repeat(maxEntities) {

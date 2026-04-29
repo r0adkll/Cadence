@@ -1,12 +1,12 @@
 [versions]
-agp = "8.10.1"
-compose-multiplatform = "1.8.1"
-dokka = "2.0.0"
+agp = "8.13.2"
+compose-multiplatform = "1.10.3"
+dokka = "2.2.0"
 junit5 = "5.11.4"
-kotlin = "2.1.21"
+kotlin = "2.3.21"
 ktlint = "0.49.1"
-mavenPublish = "0.30.0"
-spotless = "6.25.0"
+mavenPublish = "0.36.0"
+spotless = "8.4.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
