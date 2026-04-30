@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="Dependency updates">
-      <change afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/tracer/Tracer.kt" afterDir="false" />
+    <list default="true" id="c60a4dd4-0148-41f2-842d-85e13736fd21" name="Changes" comment="Add trace instrumentation to the the core systems">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorld.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorld.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorldDsl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/GameWorldDsl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/World.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/ecs/World.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/system/PhysicsSystem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/commonMain/kotlin/com/r0adkll/cadence/game/system/PhysicsSystem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777469301458</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add trace instrumentation to the the core systems">
+      <option name="closed" value="true" />
+      <created>1777500568529</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1777500568529</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +356,8 @@
     <MESSAGE value="Adding badges and updated instructions to readme" />
     <MESSAGE value="Add demo gif" />
     <MESSAGE value="Dependency updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dependency updates" />
+    <MESSAGE value="Add trace instrumentation to the the core systems" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add trace instrumentation to the the core systems" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

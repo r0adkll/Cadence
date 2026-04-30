@@ -98,9 +98,7 @@ class World {
     return componentManager.get(entity)
   }
 
-  fun setTracer(tracer: Tracer) {
-    this.tracer = tracer
-  }
+  inline fun <R> trace(label: String, block: () -> R): R = tracer.trace(label, block)
 }
 
 class EntityRegistrationScope(
